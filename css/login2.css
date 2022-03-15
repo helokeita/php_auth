@@ -1,0 +1,25 @@
+/* .text-center {
+    text-align: center!important;
+} */
+h1{
+    color: aliceblue;
+}
+h2{
+    color: rgb(243, 240, 240);
+}
+body{
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background-color: #e7b1b1;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-floating {
+    position: relative;
+}

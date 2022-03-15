@@ -1,0 +1,98 @@
+﻿# A5:ER FORMAT:16
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.17.0 Copyright © 1997 - 2022 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=ユーザ
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",6,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=6
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=5
+RDBMSTypeName=MySQL
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=login_users
+LName=ユーザログイン情報
+Comment=
+TableOption=
+Page=MAIN
+Left=900
+Top=450
+Field="ログインユーザ情報ID","login_users_id","int(11)","NOT NULL",0,"","ログインユーザの識別子",$000000FF,"auto_increment"
+Field="ログインID","login_id","varchar(255)","NOT NULL",,"","ログインするときに必要なID(メールアドレス)",$FFFFFFFF,""
+Field="パスワード","password","varchar(255)","NOT NULL",,"","ログインするときに必要なパスワード(ハッシュ値)",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20220311131905
+Position="MAIN",900,450,486,93
+ZOrder=1
+
+[Entity]
+PName=login_session
+LName=ログインセッション
+Comment=
+TableOption=
+Page=MAIN
+Left=150
+Top=450
+Field="ログインセッションID","id","int(11)","NOT NULL",0,"","セッションの識別子",$000000FF,"auto_increment"
+Field="ログインユーザ情報ID","login_users_id","int(11)","NOT NULL",,"","ログインユーザの識別子",$FFFFFFFF,""
+Field="キー","pass_key","varchar(255)","NOT NULL",,"","ログインを証明するためのキー",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20220311134021
+Position="MAIN",150,450,532,108
+ZOrder=4
+
+[Relation]
+Entity1=login_users
+Entity2=login_session
+RelationType1=2
+RelationType2=3
+Fields1=login_users_id
+Fields2=login_users_id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1803,8197,1553,R,R,""
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20220310190435
+LineMode=0
+Bar1=180
+Bar2=820
+Bar3=155
+TermPos1=R
+TermPos2=R
+ZOrder=6

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css"> 
+    <title>ユーザ登録画面</title>
+</head>
+<body class="text-center">
+    <main class="form-signin">
+    <h1 class='h1 mb-3 fw-normal'>ユーザー登録</h1><br>
+        <form action="user_regist_complete.php">
+            <p class="error_message">#error_message#</p>
+               
+            <div class="form-floating">
+                <input type="text"  class="form-control" id="floatingInput" name="mail" value="#mail#"><br>
+                <label for="floatingInput">ユーザID(メールアドレス)</label>
+            </div>
+            <div class="form-floating">
+                <input type="password"  class="form-control" id="floatingInput" name="password" ><br>
+                <label for="floatingInput">パスワード</label>
+            </div>
+            <div class="form-floating">
+                <input type="password"  class="form-control" id="floatingInput" name="password_confirm" ><br>
+                <label for="floatingInput">パスワード（確認用）</label>
+            </div>
+            <br>
+            <button class='w-100 btn btn-lg btn-primary' type="submit">登録</button>
+            <br><br>
+            <button class='w-100 btn btn-lg btn-primary' formaction="login.php">ログインページへ戻る</button>
+        </from>
+    <main>
+</body>
+</html>
